@@ -6,7 +6,12 @@ content = Utils.define_feature_content()
 
 @content.on_startup
 def on_startup():
-    print(f"Hello '{content.feature_name}' feature!")
+    utils.show_dialog_box(
+        """You have just created a new feature without a front-end for Vixen Shell.
+All you have to do now is implement the different contents of this feature.
+Happy developing!""",
+        title=f"Feature: {utils.CurrentFeature.name}",
+    )
 
 
 @content.add_handler("data")
