@@ -1,4 +1,3 @@
 {
-    "python.autoComplete.extraPaths": ["/usr/share/vixen/features", "./config/root"],
-    "python.analysis.extraPaths": ["/usr/share/vixen/features", "./config/root"]
+    "python.defaultInterpreterPath": "/opt/vixen-env/bin/python"
 }
