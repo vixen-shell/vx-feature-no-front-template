@@ -12,16 +12,3 @@ All you have to do now is implement the different contents of this feature.
 Happy developing!""",
         title=f"Feature: {utils.CurrentFeature.name}",
     )
-
-
-@content.add_handler("data")
-def date():
-    from datetime import datetime
-
-    date = datetime.now()
-
-    return {
-        "day": date.strftime("%d"),
-        "mounth": date.strftime("%m"),
-        "year": date.strftime("%Y"),
-    }
