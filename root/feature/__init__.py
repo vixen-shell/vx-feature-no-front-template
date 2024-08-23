@@ -1,14 +1,15 @@
-from vx_feature_utils import Utils
+from vx_root import feature
 
-utils = Utils.define_feature_utils()
-content = Utils.define_feature_content({"frames": "disable", "state": "disable"})
+feature = feature()
+
+feature.init({"frames": "disable", "state": "disable"})
 
 
-@content.on_startup
+@feature.on_startup
 def on_startup():
-    utils.show_dialog_box(
-        """You have just created a new feature without a front-end for Vixen Shell.
-All you have to do now is implement the different contents of this feature.
-Happy developing!""",
-        title=f"Feature: {utils.CurrentFeature.name}",
+    feature.dialog(
+        "You have just created a new feature without a front-end for Vixen Shell.\n"
+        "All you have to do now is implement the different contents of this feature.\n"
+        "Happy developing!",
+        title=f"Feature: {feature.name}",
     )
