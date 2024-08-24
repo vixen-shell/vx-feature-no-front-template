@@ -1,6 +1,6 @@
-from vx_root import feature
+from vx_root import root_feature
 
-feature = feature()
+feature = root_feature()
 
 feature.init({"frames": "disable", "state": "disable"})
 
